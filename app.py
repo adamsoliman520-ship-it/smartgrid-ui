@@ -184,7 +184,10 @@ def kpi_dataframe(selected_scenarios: List[str], results: List[Dict[str, Any]]) 
     return pd.DataFrame(rows)
 
 
-def prettify_audit_table(df: pd.DataFrame) -> pd.io.formats.style.Styler:
+from pandas.io.formats.style import Styler
+
+def prettify_audit_table(df: pd.DataFrame) -> Styler:
+    ...
     """
     Rend le tableau audit lisible:
     - renomme si possible
